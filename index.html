@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="English">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/Resume.css">
+        <title>Resume</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">LOGO</a>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me &bigtriangledown;</a>
+                        <ul>
+                            <li><a href="#biography">My short biography</a></li>
+                            <li><a href="#biography">How i can describe myself</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#edc">My education</a></li>
+                    <li><a href="#sk">My skills</a></li>
+                    <li><a href="#hb">My Hobbies</a></li>
+                    <li><a href="#cnt">My contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="Welcome" id="biography">Welcome on my Site/Portfolio</h1><br>
+            <p class="wel">Here you find some information about me, just like my skills, education and other information that can help you understand who am i </p>
+
+            <div class="info-container">
+                <div class="info-block">
+                    <h2>About Me</h2>
+                    <p>I was born on October 19, 2006, in Kharkiv, Ukraine. There, I started school at the age of six and completed it online while already in Germany. In Germany, I attended school in Bad Bevensen (KGS Bad Bevensen) from September 12, 2022, to July 5, 2023. Currently, since September 25, 2023, I am attending a gymnasium in Hanover (Leibnizschule).</p>
+                </div>
+                <div class="info-block">
+                    <h2>How i describe myself</h2>
+                    <p>I would describe myself as a cheerful person. I find it easy to make friends and work in a team. I can be quiet and calm with people who prefer a quieter atmosphere, but I can also enjoy conversation and fun with those who love noise and excitement. I do not have any bad habits such as smoking or drinking alcohol.</p>
+                </div>
+            </div> 
+        </main>
+
+        <script>
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - (window.innerHeight / 2 - targetElement.offsetHeight / 2),
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
+        <div>
+            <h1 class="Welcome">My education</h1>
+            <p class="wel">So, now i would like to tell you about my education</p>
+
+            <div class="container">
+                <div class="block" id="edc">
+                    <h2>My education</h2>
+                    <p>As I mentioned above, I have studied in three different schools during my life, two of which are in Germany. Overall, I enjoy studying and learning new information. Discovering something new is very interesting to me, and learning comes quite easily, especially if it is something that fascinates me. Among my school documents, I have a diploma from my Ukrainian school, which is recognized in Germany as a Realschulabschluss. Additionally, I have a diploma for completing the ninth grade from KGS Bad Bevensen, and a diploma for completing the tenth grade from Leibnizschule.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="Welcome">My skills</h1>
+            <p class="wel">Okay, now i gonna tell you something about my skills</p>
+
+            <div class="container">
+                <div class="block" id="sk">
+                    <h2>My skills</h2>
+                    <p>I haven't attended any courses, and to be honest, I started learning programming recently, around June 2024. At the moment, I don't know a lot, but I can do something. For example, this website was made by me as an example of what I can do. I also have basic knowledge of Python and I'm learning it. Additionally, I plan to start learning JavaScript.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="Welcome">My hobbies</h1>
+            <p class="wel">And now you can read about my hobbies to get to know me better</p>
+
+            <div class="container">
+                <div class="block" id="hb">
+                    <h2>My hobbies</h2>
+                    <p>I'm interested in many things. For example, I like swimming and playing basketball. Naturally, I enjoy video games. I also love reading books; over the past year, I have read 18 fantasy books. Additionally, I enjoy watching movies and listening to music, just like most people. I also like playing the tabletop role-playing game Dungeons & Dragons.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div class="footer" id="cnt">
+                <div class="contacts">
+                    <h1>So, here is my contacts</h1>
+                    <h2>my phone number: +49 160 5994900</h2>
+                    <h2>my E-mail address: aslansamedov@gmail.com</h2>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html> 
